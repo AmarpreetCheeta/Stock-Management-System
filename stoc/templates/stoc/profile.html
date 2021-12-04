@@ -1,0 +1,274 @@
+{% extends 'stoc/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'stoc/css/home.css' %}">
+<link rel="shotcut icon" href="{% static 'stoc/images/stock_icon.png' %}" type="image x-icon">
+{% endblock %}
+
+{% block title %}
+<title>EntryStock - Profile({{request.user.first_name}})</title>
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container" style="max-width: 63rem;">
+        <a class="navbar-brand _y6f" href="{% url 'home' %}">EntryStock</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav-item navbar-nav me-auto mb-2 mb-lg-0" style="width: 47.2rem;">
+                <p class="navbar-nav _u7c" href="">Profile</p>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    {% if profile_img %}
+                    {% for pi in profile_img %}
+                    <a class="nav-link dropdown" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img width="35" height="35" style="border-radius: 50%;" src="{{pi.image.url}}"
+                            alt="{{request.user.first_name}}">
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    <a class="nav-link dropdown" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <svg width="35" height="35" fill="#678bf7" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                    </a>
+                    {% endif %}
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" style="color: #678bf7;" href="">
+                                <svg width="20" height="20" style="margin-right: 3px;margin-left:10px;" fill="#678bf7"
+                                    viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg> Profile
+                            </a>
+                        </li>
+                        <li>
+                            {% if user_info_data %}
+                            {% for uid in user_info_data %}
+                            <a class="dropdown-item" style="color: #678bf7;"
+                                href="{% url 'user_info_update' uid.business_name  %}">
+                                <svg width="20" height="20" style="margin-right: 3px;margin-left:10px;" fill="#678bf7"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                </svg> Settings
+                            </a>
+                            {% endfor %}
+                            {% else %}
+                            <a class="dropdown-item" style="color: #678bf7;" href="{% url 'user_info' %}">
+                                <svg width="20" height="20" style="margin-right: 3px;margin-left:10px;" fill="#678bf7"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                </svg> Settings
+                            </a>
+                            {% endif %}
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" style="color: #678bf7;" href="{% url 'logout' %}">
+                                <svg width="20" height="20" style="margin-right: 3px;margin-left:10px;"
+                                    fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                                </svg> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="card" style="background-color: #f8f8f8;border: none;">
+        <div class="card-body">
+            <div class="container my-3 text-center">
+                <div class="_yhhKLP">
+                    {% if profile_img %}
+                    {% for pi in profile_img %}
+                    <figure>
+                        <a href="{% url 'profileimg_update' pi.id %}">
+                            <img class="_j7u" width="200" height="200" style="border-radius: 50%;"
+                                src="{{pi.image.url}}" alt="{{request.user.first_name}}">
+                        </a>
+                    </figure>
+                    {% endfor %}
+                    {% else %}
+                    <figure>
+                        <a href="{% url 'profile_image' %}">
+                            <svg class="_j7u" width="200" height="200" fill="#678bf7" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </a>
+                    </figure>
+                    {% endif %}
+                    <div class="_u7bv">
+                        <strong>{{request.user.first_name}}</strong>
+                    </div>
+                    <div class="_uin5" style="margin-top: 2rem;">
+                        {% if user_info_data %}
+                        {% for uid in user_info_data %}
+                        <a class="vc-9" href="{% url 'user_info_update' uid.business_name  %}">Edit</a>
+                        {% endfor %}
+                        {% else %}
+                        <a class="vc-9" href="{% url 'user_info' %}">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="container" style="max-width: 50rem;">
+                <div class="row row-cols-2 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business name</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class=""><br>{{uid.business_name}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business email</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.business_email}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business phone</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.business_phone}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business website</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br><a class="_nj_9"
+                                        href="{{uid.business_website}}">{{uid.business_website}}</a></small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business address</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.business_address}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Types of entity</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.type_of_entity}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Industry type</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.industry_type}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card _GH6y">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Business type</h6>
+                                {% if user_info_data %}
+                                {% for uid in user_info_data %}
+                                <small class="_czv_"><br>{{uid.business_type}}</small>
+                                {% endfor %}
+                                {% else %}
+                                <small class="_czv_" style="font-weight: 650;"><br>?</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-2">
+    {% include 'stoc/footer.html' %}
+</div>
+
+{% endblock %}

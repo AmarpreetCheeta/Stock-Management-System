@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #cecece;
+}
+
+._y6f{
+    font-weight: 650;
+    color: #4167d8;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+/* section */
+._hu6y{border-radius: 5px;
+    width: 30rem;
+    margin-left: 4.2rem;
+    padding: 30px;
+}
+
+._huj7{
+    font-size: 20px;
+    color: #555555;
+}
+
+._y6x{
+    color: #8a8a8a;
+    font-weight: 550;
+}
+
+._em_input, .forget_input{
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    border: 1px solid #cacaca;
+    margin-top: 1rem;
+}
+
+._f5t4{
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4167d8;
+    color: #ffffff;
+    margin-top: 1rem;
+    width: 300px;
+}
+
+/* end section */
+
+/* footer */
+
+.footer{
+    margin-top: 4rem;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+._ik8{
+    width: 100%;
+    text-align: center;
+}
+
+/* end footer */

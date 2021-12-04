@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #cecece;
+}
+
+._y6f{
+    font-weight: 650;
+    color: #4167d8;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+._u7c{
+    font-size: 18px;
+    color: #678bf7;
+    font-weight: 650;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dropdown-menu{
+    max-width: 300px;
+}
+
+/* section */
+
+._uJI8{
+    width: 63rem;
+}
+
+._6yd_6y{
+    width: 100%;
+    height: 25rem;
+}
+
+._ijK8_{
+    border-radius: 3px;
+    -webkit-filter: brightness(70%);
+}
+
+._yh5_ty5{
+    max-width: 300px;
+    max-height: 300px;
+    -webkit-filter: brightness(80%);
+}
+
+
+._vfBN_i8{
+    border: none;
+    /* box-shadow: 0px 3px 10px 0px #dddddd; */
+    border: 1px solid #dbdbdb;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+._jKIK_{
+    color: #5c5b61;
+    text-align: center;
+    font-weight: 650;
+    font-size: 18px;
+}
+
+.NM_m6y{
+    padding: 5px;
+}
+
+.BHN_ib{
+    text-align: center;
+    padding-top: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+._G5tf{
+    transition: all 0.60s;
+}
+
+._vfBN_i8:hover ._G5tf{    
+    -ms-transform: scale(1.1);
+    -webkit-filter: scale(1.1);
+    transform: scale(1.1);
+}
+
+._GYD_7u{
+    margin-left: 16.5rem;
+}
+
+/* end section */
+
+
+/*  profile section */
+
+._kl_o9{
+    /* border: 1px solid; */
+    margin-left: 6rem;
+    width: 50rem;
+}
+
+.jh_mi{
+    /* border: 1px solid; */
+    width: 50rem;
+    margin-top: 3rem;
+}
+
+._j7u, ._o9i8{
+    border-radius: 50%;
+}
+
+._u7bv strong{
+    color: #696868;
+}
+
+.vc-9{
+    border: 1px solid #8597cc;
+    padding: 6px;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #4463be;
+    transition: all 0.50s;
+}
+
+.vc-9:hover{
+    color: #4463be;
+    border: 1px solid #acbffa;
+    background-color: #fcfcfc;
+}
+
+._y6gr{
+    display: grid;
+    grid-template-columns: 22rem 22rem;
+    column-gap: 5.9rem;
+    row-gap: 1.5rem;
+}
+
+._g5xc{
+    border-radius: 5px;
+    /* box-shadow: 0px 3px 10px 0px #e4e4e4; */
+    border: 1px solid #dbdbdb;
+    width: 22rem;
+    text-align: center;
+    padding: 10px;
+    padding-top: 1.3rem;
+    background-color: #ffffff;
+}
+
+._czv_{
+    font-size: 13px;
+    font-weight: 550;
+    color: #4b4848;
+}
+
+._nj_9{
+    text-decoration: none;
+    color: #4b4848;
+}
+
+._nj_9:hover{
+    color: #4b4848;
+}
+
+/* end profile section */
+
+
+/* profile image section */
+
+._iijuj{
+    /* border: 1px solid; */
+    width: 32rem;
+    margin-top: 4rem;
+    margin-left: 3.4rem;
+    text-align: center;
+}
+
+._bghy_{
+    /* border: 1px solid; */
+    width: 17rem;
+    padding: 10px;
+    margin-left: 7.5rem;
+}
+
+._wd3e{
+    margin-top: 2rem;
+    width: 250px;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    background-color: #4463be;
+    color: #ffffff;
+}
+
+._ig4{
+    width: 250px;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    background-color: #c93f3a;
+    color: #ffffff;
+}
+
+/* end profile image section */
+
+._GH6y{
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px #c7c7c7; */
+    border: 1px solid #dbdbdb;
+    margin-top: 3rem;    
+    background-color: #ffffff;
+}
+
+.add_usr{
+    max-height: 5rem;
+    resize: none;
+}
+
+._gP0L{
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px #c7c7c7; */
+    /* background-color: #ffffff; */
+}
+
+/* footer */
+
+.footer{
+    margin-top: 4rem;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+._ik8{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* end footer */
+
+@media (max-width: 375px){
+    ._nCX{
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width:987px){
+    ._GH6y{
+        height: 13rem;
+    }
+
+    ._U8IKI{
+        height: 10rem;
+    }
+}

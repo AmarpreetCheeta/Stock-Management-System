@@ -1,0 +1,92 @@
+{% extends 'stoc/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'stoc/css/account.css' %}">
+<link rel="shotcut icon" href="{% static 'stoc/images/stock_icon.png' %}" type="image x-icon">
+{% endblock %}
+
+{% block title %}
+<title>EntryStock - Log In</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-5" style="max-width: 22rem;">
+    <div class="card" style="background-color: #f8f8f8;border: none;">
+        <div class="card-body">
+            <div class="_title mb-4" style="text-align: left;">
+                <h5 class="card-title _lo9">EntryStock</h5>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for fm in forms %}
+                {{fm}}
+                <div class="_xce9">
+                    <p class="_yxe">{{fm.errors|striptags}}</p>
+                </div>
+                {% endfor %}
+
+                {% if forms.non_field_errors %}
+                {% for ers in forms.non_field_errors %}
+                <div class="_xce9 text-center">
+                    <p style="color: red;">{{ers}}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <input type="submit" class="btn btn-primary mt-3" value="Log In">
+            </form>
+            <div class="_yc3_ mt-4">
+                <span>
+                    <p class="_uCf4">Don't have account?
+                        <a class="_yu5" href="{% url 'signup' %}">Sign Up</a>
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<section class="_u7iy65">
+    <div class="container" style="width: 30rem;margin-top: 3rem;">
+        <div class="_hur4_">
+            <div class="_i8uc">
+                <div class="_frmo">
+                    <div class="_yc3_" style="margin-left: 5rem;">
+                        <span>
+                            <p class="_lo9">EntryStock</p>
+                        </span>
+                    </div>
+                    <form action="" method="POST" style="margin-left: 5rem;">
+                        {% csrf_token %}
+                        {% for fm in forms %}
+                        {{fm}}
+                        <div class="_xce9">
+                            <p class="_yxe">{{fm.errors|striptags}}</p>
+                        </div>
+                        {% endfor %}
+
+                        {% if forms.non_field_errors %}
+                        {% for ers in forms.non_field_errors %}
+                        <div class="_xce9">
+                            <p class="_yxe" style="width: 300px;">{{ers}}</p>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        <input type="submit" class="_t5fr" value="Log In">
+                    </form>
+                    <div class="_yc3_" style="margin-left: 5rem;margin-top: 2rem;">
+                        <span>
+                            <p class="_uCf4"><a class="_yu5" href="/password_reset/">Forget password?</a>  <a class="_iko" href="{% url 'signup' %}">Sign Up</a></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+{% endblock %}

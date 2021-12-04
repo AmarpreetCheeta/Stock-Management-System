@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #cecece;
+}
+
+._y6f{
+    font-weight: 650;
+    color: #4167d8;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+._u7c{
+    font-size: 18px;
+    color: #678bf7;
+    font-weight: 650;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* parties data section */
+
+._cvbf_7u{
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #d8d8d8;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 20px;
+    width: 38.5rem;
+    height: 32rem;
+    margin-left: 11.5rem;
+}
+
+._yX_j7{
+    border-bottom: 1px solid #dddddd;
+    margin-left: 3.9rem;
+    width: 451px;
+}
+
+.items{
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+._fgt_u{
+    padding: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #4869cc;
+    font-weight: 550;
+}
+
+._cvx_m6{
+    padding: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #4869cc;
+    font-weight: 550;
+}
+
+._gt5X-o{
+    margin-top: 1rem;
+    margin-left: 3.9rem;
+    width: 451px;
+    height: 24rem;
+    overflow: auto;
+}
+
+._ghv3e{
+    border: 1px solid;
+    width: 24rem;
+    margin-left: 2rem;
+}
+
+/* end parties data section */
+
+
+/* purchase entry section */
+
+._t5CV{
+    border: none;
+    background-color: #f8f8f8;
+}
+
+._f5BN{
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px #c7c7c7; */
+    border: 1px solid #dbdbdb;
+    margin-top: 3rem;
+    background-color: #ffffff;
+}
+
+._gJUJI{
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px #c7c7c7; */
+    border: 1px solid #dbdbdb;
+    margin-top: 3rem;
+    background-color: #ffffff;
+}
+
+._PF_i8{
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px #c7c7c7; */
+    border: 1px solid #dbdbdb;
+    margin-top: 3rem;
+    background-color: #ffffff;
+}
+
+._h6C{
+    max-width: 60px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+/* end purchase entry section */
+
+
+/* customer details section */
+
+._Y6c3_j7{
+    width: 40rem;
+    height: 35rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #d4d4d4;
+    background-color: #ffffff;
+}
+
+.XCV_8{
+    border-bottom: 1px solid #9c9a9a;
+    display: flex;
+    padding: 10px;
+    padding-top: 1.6rem;
+}
+
+._uCX_7{
+    width: 37.9rem;
+    margin-left: 2rem;
+}
+
+._deT_y6{
+    /* border: 1px solid; */
+    width: 30rem;
+    height: 27rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+    overflow: auto;
+}
+
+._fgr_o9{
+    box-shadow: 0px 3px 10px 0px #dbdbdb;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    width: 25rem;
+    margin-top: 1.5rem;
+    margin-left: 2.4rem;
+    display: flex;
+}
+
+._bt6y{
+    border: none;
+    background-color: #f8f8f8;
+}
+
+.U_j6h{
+    /* border: 1px solid; */
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.O_h5t6{
+    /* border: 1px solid; */
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+._naU_7{
+    /* border: 1px solid; */
+    width: 15rem;
+    margin-top: 6.1px;
+}
+
+._ste4r{
+    resize: none;
+    height: 80px;
+}
+
+/* end customer details section */
+
+
+/* product list section */
+
+._f4RT{    
+    height: 35rem;
+    overflow: auto;
+}
+
+._f6YUJ{
+    max-width: 36rem;
+}
+
+._gBNM_p{
+    max-width: 40rem;
+}
+
+._gJUJI{
+    height: 35rem;
+    overflow: auto;
+}
+
+/* end product list section */
+
+
+/* sales & puchase order section */
+
+._Oi8t5{
+    /* border: 1px solid; */
+    margin-top: 1rem;
+    width: 52.5rem;
+    height: 28rem;
+    margin-left: 2.3rem;
+    overflow: auto;
+}
+
+.table, ._trF4{
+    border: 1px solid #9b9b9b;
+}
+
+.LK8i{
+    color: #686868;
+}
+
+._f4r9I{
+    border: none;
+    background-color: #ffffff;
+}
+
+/* end sales & puchase order section */
+
+._jBIMG{
+    width: 100%;
+    height: 12rem;
+}
+
+._trf4{
+    width: 95px;
+    margin-right: 8px;
+}
+
+._Ik_o9{
+    font-size: 20px;
+}
+
+/* footer */
+
+.footer{
+    margin-top: 4rem;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+._ik8{
+    width: 100%;
+    text-align: center;
+}
+
+/* end footer */
+
+/* media query */
+
+@media(max-width: 360px){
+    ._Ik_o9{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 411px){
+    ._uCV5{
+        font-size: 13px;
+    }
+
+    ._f4RT{
+        height: auto;
+    }
+}
+
+/* end media query */

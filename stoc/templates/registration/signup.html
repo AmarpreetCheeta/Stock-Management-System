@@ -1,0 +1,49 @@
+{% extends 'stoc/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'stoc/css/account.css' %}">
+<link rel="shotcut icon" href="{% static 'stoc/images/stock_icon.png' %}" type="image x-icon">
+{% endblock %}
+
+{% block title %}
+<title>EntryStock - Sign Up</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-5" style="max-width: 22rem;">
+    <div class="card" style="background-color: #f8f8f8;border: none;">
+        {% if messages %}
+        {% for msg in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations!!!</strong> {{msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="card-body">
+            <div class="_title mb-4" style="text-align: left;">
+                <h5 class="card-title _lo9">EntryStock</h5>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for fm in form %}
+                {{fm}}
+                <div class="_xce9">
+                    <p class="_yxe">{{fm.errors|striptags}}</p>
+                </div>
+                {% endfor %}
+                <input type="submit" class="btn btn-primary mt-3" value="Sign Up">
+            </form>
+            <div class="_yc3_ mt-5">
+                <span>
+                    <p class="_uCf4">Already have account? <a class="_yu5" href="/accounts/login">Log In</a></p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
